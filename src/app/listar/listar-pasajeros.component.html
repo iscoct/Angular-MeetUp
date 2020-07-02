@@ -1,0 +1,21 @@
+<main class="main--position">
+  <section fxLayout="row" fxLayoutAlign="start center">
+    <button [routerLink]='["/"]' class="button--margin-left" mat-icon-button aria-label="Arrow Back Icon">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <h2>Listado de los conductores que realizarán viajes</h2>
+  </section>
+  <section>
+    <mat-accordion multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>Aux</mat-expansion-panel-header>
+        <mat-panel-description>Some description</mat-panel-description>
+      </mat-expansion-panel>
+
+      <section>This is the content of the panel</section>
+    </mat-accordion>
+  </section>
+  <section fxLayout="row" fxLayoutAlign="end center">
+    <button class="button--margin" mat-raised-button>Volver a buscar</button>
+  </section>
+</main>

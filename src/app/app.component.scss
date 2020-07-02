@@ -1,0 +1,22 @@
+$margin-left: 6em;
+$margin-right: 6em;
+
+.header--margin {
+  margin-top: 4em;
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+.footer--margin {
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+mat-nav-list.list-horizontal {
+  padding: 0;
+  .mat-list-item {
+    display: inline-block;
+    height: auto;
+    width: auto;
+  }
+}
