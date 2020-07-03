@@ -1,7 +1,21 @@
+$margin-top: 2em;
+
 .button--margin-left {
   margin-left: 7.5%;
 }
 
 .main--position {
   margin: 6em;
+}
+
+.button--margin-top {
+  margin-top: $margin-top;
+}
+
+.section--margin-top {
+  margin-top: $margin-top;
+}
+
+.section--centered-content {
+  text-align: center;
 }

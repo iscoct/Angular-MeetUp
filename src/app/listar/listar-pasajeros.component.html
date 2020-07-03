@@ -1,21 +1,87 @@
 <main class="main--position">
   <section fxLayout="row" fxLayoutAlign="start center">
-    <button [routerLink]='["/"]' class="button--margin-left" mat-icon-button aria-label="Arrow Back Icon">
+    <button [routerLink]='["/buscar/pasajeros"]' class="button--margin-left" mat-icon-button aria-label="Arrow Back Icon">
       <mat-icon>arrow_back_ios</mat-icon>
     </button>
-    <h2>Listado de los conductores que realizarán viajes</h2>
+    <h2>Listado de los pasajeros que quieren viajar</h2>
   </section>
-  <section>
+  <section class="section--margin-top">
     <mat-accordion multi>
       <mat-expansion-panel>
-        <mat-expansion-panel-header>Aux</mat-expansion-panel-header>
-        <mat-panel-description>Some description</mat-panel-description>
+        <mat-expansion-panel-header>
+          <mat-panel-title>18/2/2020, 12:00 - 14:00</mat-panel-title>
+          <mat-panel-description>Some description</mat-panel-description>
+        </mat-expansion-panel-header>
+        <section fxLayout="row" fxLayoutAlign="space-around center">
+          <section>
+            <section class="section--centered-content">
+              <mat-icon>sentiment_very_satisfied</mat-icon>
+            </section>
+            <section>
+              <section>Francisco José Cotán López</section>
+              <section class="section--centered-content">
+                <ngb-rating [(rate)]="userRate" [max]="5"></ngb-rating>
+              </section>
+            </section>
+          </section>
+          <section>
+            <section class="section--centered-content">
+              <mat-icon>sentiment_very_satisfied</mat-icon>
+            </section>
+            <section>Alejandra Pires</section>
+            <section class="section--centered-content">
+              <ngb-rating [(rate)]="userRate" [max]="5"></ngb-rating>
+            </section>
+          </section>
+        </section>
       </mat-expansion-panel>
-
-      <section>This is the content of the panel</section>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>18/2/2020, 12:00 - 14:00</mat-panel-title>
+          <mat-panel-description>Some description</mat-panel-description>
+        </mat-expansion-panel-header>
+        <section fxLayout="row" fxLayoutAlign="space-around center">
+          <section>
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+            <section>Francisco José Cotán López</section>
+            <section>
+              <ngb-rating [(rate)]="userRate" [max]="5"></ngb-rating>
+            </section>
+          </section>
+          <section>
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+            <section>Alejandra Pires</section>
+            <section>
+              <ngb-rating [(rate)]="userRate" [max]="5"></ngb-rating>
+            </section>
+          </section>
+        </section>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>18/2/2020, 12:00 - 14:00</mat-panel-title>
+          <mat-panel-description>Some description</mat-panel-description>
+        </mat-expansion-panel-header>
+        <section fxLayout="row" fxLayoutAlign="space-around center">
+          <section>
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+            <section>Francisco José Cotán López</section>
+            <section>
+              <ngb-rating [(rate)]="userRate" [max]="5"></ngb-rating>
+            </section>
+          </section>
+          <section>
+            <mat-icon>sentiment_very_satisfied</mat-icon>
+            <section>Alejandra Pires</section>
+            <section>
+              <ngb-rating [(rate)]="userRate" [max]="5"></ngb-rating>
+            </section>
+          </section>
+        </section>
+      </mat-expansion-panel>
     </mat-accordion>
   </section>
-  <section fxLayout="row" fxLayoutAlign="end center">
-    <button class="button--margin" mat-raised-button>Volver a buscar</button>
+  <section class="button--margin-top" fxLayout="row" fxLayoutAlign="end center">
+    <button [routerLink]="['/buscar/pasajeros/']" class="button--margin" mat-raised-button>Volver a buscar</button>
   </section>
 </main>

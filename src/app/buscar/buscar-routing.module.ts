@@ -7,7 +7,7 @@ import { BuscarPasajeroComponent } from './buscar-pasajero.component';
   imports: [
     RouterModule.forChild([
       {
-        path: 'pasajero',
+        path: 'pasajeros',
         component: BuscarPasajeroComponent
       },
       {

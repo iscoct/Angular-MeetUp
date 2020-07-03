@@ -5,4 +5,6 @@ import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
   templateUrl: './listar-pasajeros.component.html',
   styleUrls: ['./listar-pasajeros.component.scss']
 })
-export class ListarPasajerosComponent { }
+export class ListarPasajerosComponent {
+  userRate: number = 1;
+}
