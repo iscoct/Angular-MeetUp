@@ -6,10 +6,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BuscarPasajeroInterceptorService } from './buscar/buscar-pasajero.interceptor';
+import { SharedModule } from './shared/shared.module';
 
 import { WelcomeComponent } from './home/welcome.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -22,9 +24,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     RouterModule,
     MatButtonModule,
     MatListModule,
+    MatIconModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   declarations: [ AppComponent, WelcomeComponent ],
   providers: [

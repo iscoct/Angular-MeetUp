@@ -6,12 +6,62 @@ import { Observable, of } from 'rxjs';
 export class BuscarPasajeroInterceptorService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('Hemos conseguido interceptar la llamada HTTP');
     return of(
       new HttpResponse({
         status: 200,
         body: {
-          'nombre': 'Francisco José Cotán López'
+          'salida': 'Granada',
+          'destino': 'Jerez de la Frontera',
+          'viajes': [
+            {
+              'fecha': '18/02/2020',
+              'horaSalida': '12:00',
+              'horaLlegada': '14:00',
+              'nombreUsuario': 'Francisco José Cotán López',
+              'rating': 4,
+              'precio': 10
+            },
+            {
+              'fecha': '18/02/2020',
+              'horaSalida': '12:00',
+              'horaLlegada': '14:00',
+              'nombreUsuario': 'Francisco José Cotán López',
+              'rating': 4,
+              'precio': 10
+            },
+            {
+              'fecha': '18/02/2020',
+              'horaSalida': '12:00',
+              'horaLlegada': '14:00',
+              'nombreUsuario': 'Francisco José Cotán López',
+              'rating': 4,
+              'precio': 10
+            },
+            {
+              'fecha': '18/02/2020',
+              'horaSalida': '12:00',
+              'horaLlegada': '14:00',
+              'nombreUsuario': 'Francisco José Cotán López',
+              'rating': 4,
+              'precio': 10
+            },
+            {
+              'fecha': '18/02/2020',
+              'horaSalida': '12:00',
+              'horaLlegada': '14:00',
+              'nombreUsuario': 'Francisco José Cotán López',
+              'rating': 4,
+              'precio': 10
+            },
+            {
+              'fecha': '18/02/2020',
+              'horaSalida': '12:00',
+              'horaLlegada': '14:00',
+              'nombreUsuario': 'Francisco José Cotán López',
+              'rating': 4,
+              'precio': 10
+            }
+          ]
         }
       })
     );

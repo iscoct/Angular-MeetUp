@@ -1,28 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
-import { throwError } from 'rxjs';
+import { throwError, Observable } from 'rxjs';
 
 import { catchError, tap } from 'rxjs/operators';
 
 @Injectable()
 export class BuscarPasajeroService {
   private buscarPasajeroUrl = 'api/buscar-pasajero';
-  private informacionPasajeros;
 
   constructor(
     private http: HttpClient
   ) { }
 
-  buscarPasajeros(informacionPasajero) {
+  buscarPasajeros(informacionPasajero): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    console.log(`Informacion del pasajero recibida en buscarPasajero: ${JSON.stringify(informacionPasajero)}`);
 
-    this.http.post<any>(this.buscarPasajeroUrl, informacionPasajero, { headers })
-      .subscribe({
-        next: data => console.log(`Se ha completado la llamada POST http con: ${JSON.stringify(data)}`),
-        error: error => console.error('Hubo un error')
-      });
+    return this.http.post<any>(this.buscarPasajeroUrl, informacionPasajero, { headers });
   }
 
   private handleError(err: HttpErrorResponse) {

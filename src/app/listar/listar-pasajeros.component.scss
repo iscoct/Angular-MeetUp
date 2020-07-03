@@ -1,4 +1,4 @@
-$margin-top: 2em;
+$margin-top: 4em;
 
 .button--margin-left {
   margin-left: 7.5%;
@@ -16,6 +16,10 @@ $margin-top: 2em;
   margin-top: $margin-top;
 }
 
-.section--centered-content {
-  text-align: center;
+.button--margin-right, .section--margin-right {
+  margin-right: 2em;
+}
+
+.h3--margin-left {
+  margin-left: 2.5em;
 }

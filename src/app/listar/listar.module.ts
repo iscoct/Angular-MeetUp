@@ -11,11 +11,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ListarPasajerosComponent } from './listar-pasajeros.component';
 import { ListarPasajerosRoutingModule } from './listar-routing.module';
+import { SharedModule } from '../shared/shared.module'
 
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
+    SharedModule,
     RouterModule,
     MatButtonModule,
     MatInputModule,

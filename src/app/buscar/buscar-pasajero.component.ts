@@ -29,8 +29,11 @@ export class BuscarPasajeroComponent {
   }
 
   send(): void {
-    this.buscarPasajeroService.buscarPasajeros(this.placesForm.value);
-    this.router.navigate(['/listar/pasajeros']);
+    this.buscarPasajeroService.buscarPasajeros(this.placesForm.value)
+      .subscribe({
+        next: data => this.router.navigateByUrl('/listar/pasajeros', { state: data }),
+        error: error => console.error('Hubo un error')
+      });
   }
 
   constructor(

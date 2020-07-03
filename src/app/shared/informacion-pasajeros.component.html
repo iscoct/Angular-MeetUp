@@ -1,0 +1,21 @@
+<mat-accordion multi>
+  <mat-expansion-panel *ngFor="let viaje of viajes; index as i">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ viaje.fecha }}, {{ viaje.horaSalida }}- {{ viaje.horaLlegada }}</mat-panel-title>
+      <mat-panel-description>{{ viaje.nombreUsuario }}</mat-panel-description>
+    </mat-expansion-panel-header>
+    <section fxLayout="row" fxLayoutAlign="space-around center">
+      <section>
+        <section class="section--centered-content">
+          <mat-icon>sentiment_very_satisfied</mat-icon>
+        </section>
+        <section>
+          <section class="section--centered-content">
+            <ngb-rating [(rate)]="viaje.rating" [max]="viaje.rating"></ngb-rating>
+            <section>{{ viaje.precio }} €</section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </mat-expansion-panel>
+</mat-accordion>
